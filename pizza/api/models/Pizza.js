@@ -22,12 +22,15 @@ module.exports = {
       type:'string'
     },
     precio:{
-      type:'number'
+      type:'string'
+    },
+    imagen:{
+      type:'string'
     },
 
     idPizza: {
       model: 'Usuario',
-      required: true
+      required: false
     }
   }
 };

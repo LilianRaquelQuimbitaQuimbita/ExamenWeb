@@ -1,8 +1,12 @@
+<div class="container">
+
+  <form action="/Vista/comprarPizza" method="post">
 <div id="contenedor" class="row">
   <% for(var i=0; i<pizzas.length; i++) {%>
   <div class="card" style="width: 20rem;">
+    <div class="card" style="width: 20rem">
+      <img class="card-img-top" src="<%=pizzas[i].imagen%>" alt="PIZZA">
     <div class="card-block">
-
       <h4 class="card-title"><%= pizzas[i].nombrePizza %></h4>
       <p class="card-text">
         <%= pizzas[i].adereso1 %>
@@ -13,13 +17,15 @@
       <p class="card-text">
         <%= pizzas[i].adereso3 %>
       </p>
-      <p class="card-text">
-        <%= pizzas[i].precio %>
+      <p class="card-text">Precio:<%= pizzas[i].precio %>$
       </p>
-
-      </form>
-
+      <button type="submit" class="btn btn-outline-success">Comprar Pizza</button>
+    </div>
     </div>
   </div>
   <% } %>
+</div>
+
+
+  </form>
 </div>

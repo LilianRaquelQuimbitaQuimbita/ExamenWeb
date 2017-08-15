@@ -40,4 +40,7 @@ module.exports = {
             }
         });
     },
+    comprarPizza: function (req, res) {
+        return res.ok('Pizza Comprada');
+    }
 };

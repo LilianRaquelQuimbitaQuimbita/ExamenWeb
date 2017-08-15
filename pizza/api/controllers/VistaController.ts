@@ -53,5 +53,7 @@ module.exports = {
       });
   },
 
-
+  comprarPizza:(req,res)=>{
+    return res.ok('Pizza Comprada')
+}
 };
