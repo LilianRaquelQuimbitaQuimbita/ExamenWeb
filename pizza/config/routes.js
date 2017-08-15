@@ -38,6 +38,8 @@ module.exports.routes = {
   'get /login':
     'VistaController.login',
 
+  'get /seleccionarPizza':
+    'VistaController.listarPizzas',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

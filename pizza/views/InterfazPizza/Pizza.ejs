@@ -1,0 +1,25 @@
+<div id="contenedor" class="row">
+  <% for(var i=0; i<pizzas.length; i++) {%>
+  <div class="card" style="width: 20rem;">
+    <div class="card-block">
+
+      <h4 class="card-title"><%= pizzas[i].nombrePizza %></h4>
+      <p class="card-text">
+        <%= pizzas[i].adereso1 %>
+      </p>
+      <p class="card-text">
+        <%= pizzas[i].adereso2 %>
+      </p>
+      <p class="card-text">
+        <%= pizzas[i].adereso3 %>
+      </p>
+      <p class="card-text">
+        <%= pizzas[i].precio %>
+      </p>
+
+      </form>
+
+    </div>
+  </div>
+  <% } %>
+</div>

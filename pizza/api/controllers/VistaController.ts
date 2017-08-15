@@ -1,6 +1,7 @@
 declare var module;
 declare var sails;
 declare var Usuario;
+declare var Pizza;
 module.exports = {
 
   login: (req, res) => {
@@ -18,9 +19,9 @@ module.exports = {
 
             if(parametros.password==usuarioEncontrado.password){
               console.log("Estas logeado");
-              return res.ok('Estas logeado, aqui iria las paginas del administrador');
+              return res.redirect('/seleccionarPizza');
             }else{
-              return res.serverError("Password Incorrecta")
+              return res.redirect('/');
             }
 
           }
@@ -32,6 +33,24 @@ module.exports = {
       return res.view('Oculto/loginAdm');
 
     }
+  },
+
+  listarPizzas:(req,res)=> {
+
+    let parametros = req.allParams();
+
+    sails.log.info("Parametros", parametros);
+    Pizza
+      .find()
+      .exec((err, pizzas) => {
+        if (err) return res.negotiate(err);
+        else {
+          return res.view('InterfazPizza/Pizza', {
+            pizzas: pizzas
+          });
+        }
+
+      });
   },
 
 

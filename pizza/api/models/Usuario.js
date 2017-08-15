@@ -6,7 +6,8 @@
  */
 
 module.exports = {
-
+ // para crear usuario
+  //http://localhost:1337/Usuario/create?nombreUsuario=Lilian&correo=lilian.quimbita@epn.edu.ec&password=123
   attributes: {
     nombreUsuario:{
       type:'string'
